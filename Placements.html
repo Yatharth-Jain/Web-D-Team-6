@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+      *{
+    box-sizing: border-box;
+    margin:0px;
+}
+
+.Header{
+    display: flex;
+    height:auto;
+    padding: 15px;
+    background-image: url("https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/05/Gradient-Round-Up-Featured-Image.jpg?resize=1250,1120");
+    background-position: 0px -220px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Header div:hover{
+    transform: scale(1.2);
+}
+nav div{
+    position: sticky;
+    top: 0px;
+}
+.indexes{
+    flex-basis: 100px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10PX;
+    padding: 5px 10px;
+    background-color: #f8658d;
+    border-radius: 9px;
+    color: #510512;
+    text-decoration: none;
+}
+.indexes:hover{
+    background-color: #fa5762;
+    color: rgb(85, 9, 47);
+    transform: scale(1.2);
+}
+.indexes:active{
+    background-color: #e43b46;
+    color: rgb(245, 184, 214);
+    transform: scale(1.2);
+}
+.Search{
+    outline: 0px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: rgb(253 154 171);
+    height: 24px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: 15px;
+    font-weight: bold;
+    color: rgb(85 13 13);
+}
+.Search:active{
+    background-color: rgb(252, 179, 191);
+}
+.bton{
+
+background-color: #f04774;
+border: 0px;
+margin-left: auto;
+margin-right: 20px;
+height: 50px;
+width: 90px;
+padding: 13px;
+text-align: center;
+color: rgb(97, 35, 15);
+font-weight: bolder;
+border-radius: 5px;
+}
+.bton:hover{
+    background-color: #c937a2;
+    transform: scale(1.2);
+    color: #510512;
+}
+.bton:active{
+    background-color: #b82791;
+    color: #f09dab;
+}
+.starter{
+    height: 313px;
+    background-image: url(https://placements.iiitl.ac.in/static/media/iiitl.7631c287.jpeg);
+    background-repeat: no-repeat;
+    background-position: 0px -206px;
+    background-size: 100%;
+    z-index: -200;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.clgicon{
+    height: 220px;
+    width: 280px;
+    background-image: url(https://iiitl.ac.in/pgdds1/assets/img/logo.png);
+    background-size: 280px;
+    background-position: 0px -6px;
+    background-repeat: no-repeat;
+}
+.clgname{
+    height: 100px;
+    width: 1300px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+    /* border:2px solid #510512; */
+}
+.clgname h1{
+    font-size: 40px;
+    font-weight:bolder;
+    color: #ffffff;
+}
+.clgname p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #ffffff;
+}
+#part-1,#part-2,#part-3,#part-4{
+    height: 30rem;
+    /* border: 3px solid purple; */
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content:space-evenly;
+    font-family: 'Pacifico', cursive;
+}
+.imgdiv{
+    height: 25rem;
+    flex-basis: 25rem;
+    display: block;
+    padding-left: 4rem;
+    border-radius: 40px;
+    opacity: 0.90;
+}
+.imgdiv:hover{
+    opacity: 1;
+    transform: scale(1.01);
+
+}
+.partcontent{
+    height: 25rem;
+    font-size: 1.2em;
+    color: #49040f;
+    padding: 2%;
+    text-align: center;
+    flex-basis: 75%;
+    border-radius: 40px;
+    font-family: 'Pacifico', cursive;
+    background-color: rgb(243, 243, 136,0.4);
+}
+.partcontent:hover{
+    transform: scale(1.01);
+    background-color: rgb(243, 243, 136,0.7);
+}
+.partcontent h1{
+    font-family: 'Arvo', serif;
+    text-align: left;
+    padding-left: 5%;
+}
+.divider{
+    background-color: #57010f;
+    border-radius: 1px;
+    width: 98%;
+    margin:0px auto ;
+    padding: 1px;
+}
+    </style>
+</head>
+<body  >
+    <div class="starter" >
+      <div class="clgicon"></a></div>
+       <div class="clgname">
+        <h1>Indian Institute of Information Technology, Lucknow</h1>
+        <p>(An Institute of National Importance by the Act of Parliament)</p>
+       </div>
+    </div>
+     <header style="padding: 0em; position: sticky; top: 0; z-index: 20;">
+      <nav >
+        <div class="Header">
+          <div><a class="indexes" href="homepage.html">Home Page</a></div>
+          <div><a class="indexes" href="Academics.html">Academics</a></div>
+          <div><a class="indexes" href="Placements.html">Placement</a></div>
+          <div><a class="indexes" href="gallery.html">Gallery</a></div>
+          <div><a class="indexes" href="aboutus.html">About Us</a></div>
+          <div><a class="indexes" href="Contact Us.html">Contact Us</a></div>
+          <a href="https://iiitlucknow.netlify.app/" class="bton">Log In</a>
+        </div>
+      </nav>
+     </header>
+    <div class="container">
+        <h1 class="my-4 text-white bg-info text-center ">
+          IIIT Lucknow Placement Cell
+        </h1>
+        <hr>
+        <h3 class="text-center">Placement Statistics (B.Tech) 2022</h3>
+        <hr>
+        <div class="row my-4 container">
+          <div class="col-sm-6">
+              <img src="https://placements.iiitl.ac.in/static/media/gear21.b08b8999.png" alt="Img not found" width="400px">
+            <!-- <img src={process.env.PUBLIC_URL + "gearbtech.png"} width="400px" /> -->
+          </div>
+          <div class="col-sm-6">
+              <img src="https://placements.iiitl.ac.in/static/media/stats21.299a3e46.png" alt="Img not found" width="400px">
+            <!-- <img src={process.env.PUBLIC_URL + "statsbtech.png"} width="400px"/> -->
+          </div>
+        </div>
+        <hr>
+        <h3 class="text-center">Placement Statistics (M.Tech) 2022</h3>
+        <hr>
+        <div class="row my-4 container">
+          <div class="col-sm-6">
+              <img src="https://placements.iiitl.ac.in/static/media/gearmtec22.824fc319.png" alt="Img not found" width="250px">
+            <!-- <img src={process.env.PUBLIC_URL + "gearmtec.png"} width="250px" /> -->
+          </div>
+          <div class="col-sm-6">
+              <img src="https://placements.iiitl.ac.in/static/media/stats22mtech.e4576f63.png" alt="Img not found" width="400px">
+            <!-- <img src={process.env.PUBLIC_URL + "statsmtech.png"} width="400px"/> -->
+          </div>
+        </div>
+        <hr>
+        <h2 class="text-center">Older Placements</h2>
+
+        <div class="accordion my-4 shadow p-3 mb-5 bg-body rounded" >
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne" >
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseOne"
+              >
+                  <h5>2021</h5>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseOne"
+              class="accordion-collapse collapse "
+              aria-labelledby="panelsStayOpen-headingOne"
+            >
+              <div class="accordion-body  bg-secondary bg-opacity-10">
+                <div class="container">
+                  <div class="box-h my-4">
+                    <p class="cp-clg-h text-danger text-opacity-75">
+                      <h4>AVERAGE PACKAGE OFFERED</h4>
+                    </p>
+                    <hr>
+                  </div>
+                  <h5>Rs. 19.00 Lakhs per Annum.</h5>
+                  <div class="box-h my-4">
+                    <p class="cp-clg-h text-danger text-opacity-75">
+                      <h4>HIGHEST PACKAGE OFFERED</h4>
+                    </p>
+                    <hr>
+                  </div>
+                  <h5>Rs. 48.00 Lakhs per Annum.</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item  bg-secondary bg-opacity-10">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo"
+              >
+                  <h5>2020</h5>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingTwo"
+            >
+              <div class="accordion-body">
+                <div class="container">
+                  <div class="box-h my-4">
+                    <p class="cp-clg-h text-danger text-opacity-75">
+                      <h4>AVERAGE PACKAGE OFFERED</h4>
+                    </p>
+                    <hr>
+                  </div>
+                  <h5>Rs. 18.42 Lakhs per Annum.</h5>
+                  <div class="box-h my-4">
+                    <p class="cp-clg-h text-danger text-opacity-75">
+                      <h4>HIGHEST PACKAGE OFFERED</h4>
+                    </p>
+                    <hr>
+                  </div>
+                  <h5>Rs. 43.00 Lakhs per Annum.</h5>
+                </div>
+                <div class="accordion-body">
+                  <div class="box-card crs-box">
+                    <div class="box-h">
+                      <h4 class="cp-clg-h my-4 text-danger text-opacity-75">
+                        RECRUITERS DISTRIBUTION
+                      </h4>
+                      <hr>
+                    </div>
+                    <div class="box-p">
+                      <table class="table table-striped">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <h5>Category</h5>
+                            </td>
+                            <td>
+                              <h5>Distribution (%)</h5>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Core IT</td>
+                            <td>26.40%</td>
+                          </tr>
+                          <tr>
+                            <td>Consultancy</td>
+                            <td>25.90%</td>
+                          </tr>
+                          <tr>
+                            <td>Travel Network</td>
+                            <td>11.10%</td>
+                          </tr>
+                          <tr>
+                            <td>Finance</td>
+                            <td>11.00%</td>
+                          </tr>
+                          <tr>
+                            <td>Others</td>
+                            <td>10.80%</td>
+                          </tr>
+                          <tr>
+                            <td>Analytics</td>
+                            <td>7.40%</td>
+                          </tr>
+                          <tr>
+                            <td>Engineering & Technology</td>
+                            <td>7.40%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item  bg-secondary bg-opacity-10">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree"
+              >
+                  <h5>2019</h5>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingThree"
+            >
+              <div class="accordion-body">
+                <div class="container">
+                  <div class="box-h my-4">
+                    <p class="cp-clg-h text-danger text-opacity-75">
+                      <h4>AVERAGE PACKAGE OFFERED</h4>
+                    </p>
+                    <hr>
+                  </div>
+                  <h5>Rs. 11.37 Lakhs per Annum.</h5>
+                  <div class="box-h my-4">
+                    <p class="cp-clg-h text-danger text-opacity-75">
+                      <h4>HIGHEST PACKAGE OFFERED</h4>
+                    </p>
+                    <hr>
+                  </div>
+                  <h5>Rs. 28.00 Lakhs per Annum.</h5>
+                  <div class="box-h my-4">
+                    <p class="cp-clg-h text-danger text-opacity-75">
+                      <h4>PLACEMENT STATISTICS</h4>
+                    </p>
+                    <hr>
+                  </div>
+                  <h5>Placement Percentage -- 96.80%</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item  bg-secondary bg-opacity-10">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFour"
+                aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseFour"
+              >
+                  <h5>2018</h5>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseFour"
+              class="accordion-collapse collapse "
+              aria-labelledby="panelsStayOpen-headingFour"
+            >
+              <div class="accordion-body">
+                <h5>First batch passed out in 2019.</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion shadow p-3 mb-5 bg-body rounded" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+              <button
+                class="accordion-button "
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFive"
+                aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseFive"
+              >
+                  <h5>Our Recruiters</h5>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseFive"
+              class="accordion-collapse collapse show"
+              aria-labelledby="panelsStayOpen-headingFive"
+            >
+              <div class="accordion-body">
+                <div class="container">
+                    <img src="https://img.collegepravesh.com/2021/04/IIIT-Lucknow-Recruiters-2021.jpg" alt="Img not found" width="1050px">
+                  <!-- <img src={process.env.PUBLIC_URL + "Recruiters.jpg"} width="1200px"/> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item text-center">
+            <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+              <button
+                class="accordion-button "
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseSix"
+                aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseSix"
+              >
+                  <h5>Our Past Recruiters</h5>
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseSix"
+              class="accordion-collapse collapse "
+              aria-labelledby="panelsStayOpen-headingSix"
+            >
+              <div class="accordion-body">
+                <div class="container">
+                    <img src="https://img.collegepravesh.com/2019/12/IIIT-Lucknow-Past-Recruiters-2020.png" alt="Img not found" width="1050px">
+                  <!-- <img src={process.env.PUBLIC_URL + "Recruiters2020.webp"} width="1200px"/> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><hr>
+
+        <div class="row my-4 text-center">
+        <h3>THE INSTITUTE SPEAKS</h3>
+          <div class="col-sm-6">
+            <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+              <div class="card-header bg-primary bg-opacity-25">
+                <h3> A vision to follow</h3>
+                <br>
+                <h5>EVOLVING A BRAND-NAME TAKES YEARS OF NURTURING</h5>
+              </div>
+              <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                  <p>
+                    Evolving a brand-name takes years of nurturing, hard work
+                    and passion. IIIT Lucknow, which started its journey in
+                    2015, has brought in the culture of innovation among its
+                    students.
+                  </p>
+                  <footer class="blockquote-footer text-primary">
+                    <cite title="Source Title">Dr. Arun Mohan Sherry</cite>
+                    <br>
+                    Director IIITLucknow
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+              <div class="card-header bg-primary bg-opacity-25">
+                <h3>Exploring the skies</h3>
+                <br>
+                <h5>THE TRAINING AND PLACEMENT CELL</h5>
+              </div>
+              <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                  <p>
+                    The Training and Placement cell of Indian Institute of
+                    Information Technology, Lucknow is an integral part of the
+                    academics It helps in shaping the careers of our students in
+                    the field of Information Technology.
+                  </p>
+                  <footer class="blockquote-footer text-primary">
+                    <cite title="Source Title">Dr. Vishal Krishna Singh</cite>
+                    <br>
+                    Training and Placement Officer IIITLucknow
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
+</body>
+</html>

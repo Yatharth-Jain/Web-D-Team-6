@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device -width, initial - scale=1.0">
+    <title>Responsive Contact US Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans -serif;
+        }
+
+        .contact {
+            position: relative;
+            min-height: 100vh;
+            padding: 50px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: url(bg.jpg);
+            background-size: cover;
+            background-blend-mode: normal;
+        }
+
+        .bg {
+            background-color: black;
+            border-radius: 30px;
+            opacity: 0.6;
+            height: 80%;
+            width: 75%;
+            z-index: 1;
+            position: absolute;
+            display: inline;
+            top: 45%;
+            left: 14%;
+        }
+
+        .contact .content {
+            max-width: 800px;
+            text-align: center;
+            z-index: 2;
+
+        }
+
+        .contact .content h1 {
+            font-size: 80px;
+            font-weight: 700;
+            color: aquamarine;
+            z-index: 2;
+        }
+
+        .contact .content p {
+            font-size: large;
+            font-weight: 400;
+            color: antiquewhite;
+            z-index: 2;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            z-index: 2;
+        }
+
+        .container .contactInfo {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            z-index: 2;
+        }
+
+        .container .contactInfo .box {
+            position: relative;
+            padding: 20px;
+            display: flex;
+            z-index: 2;
+        }
+
+        .container .contactInfo .box .text {
+            display: flex;
+            margin-left: 15px;
+            font-size: medium;
+            color: #fff;
+            flex-direction: column;
+            font-weight: 300;
+            z-index: 2;
+        }
+
+        .container .contactInfo .box .text h3 {
+            font-weight: 500;
+            color: aqua;
+            z-index: 2;
+        }
+
+        .contactForm {
+            width: 30%;
+            padding: 25px;
+            background: #fff;
+            border-radius: 30px;
+            z-index: 2;
+        }
+
+        .contactForm h2 {
+            font-size: 30px;
+            color: #333;
+            font: 500;
+            z-index: 2;
+        }
+
+        .contactForm .inputbox {
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+            z-index: 2;
+        }
+
+        .contactForm .inputbox input,
+        .contactForm .inputbox textarea {
+            width: 100%;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #333;
+            outline: none;
+            resize: none;
+        }
+
+        .contactForm .inputbox span {
+            position: absolute;
+            Left: 0;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            pointer-events: none;
+            transition: 0.5s;
+            color: #666;
+        }
+
+        .contactForm .inputbox input:focus~span,
+        .contactForm .inputbox input:valid~span,
+        .contactForm .inputbox textarea:focus~span,
+        .contactForm .inputbox textarea:valid~span {
+            color: #e91e63;
+            font-size: 12px;
+            transform: translateY(-20px);
+        }
+
+        .contactForm .inputbox input[type="submit"] {
+            width: 100px;
+            background: #666;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body
+    style="background-image: url(https://d33wubrfki0l68.cloudfront.net/b4759e96fa9ada8ee8caa4c771fcd503f289d791/5cf1a/img/triangle_background.jpg)">
+    <div class="starter">
+        <div class="clgicon"></a></div>
+        <div class="clgname">
+            <h1>Indian Institute of Information Technology, Lucknow</h1>
+            <p>(An Institute of National Importance by the Act of Parliament)</p>
+        </div>
+    </div>
+    <header style="padding: 0em; position: sticky; top: 0; z-index: 20;">
+        <nav>
+            <div class="Header">
+                <div><a class="indexes" href="homepage.html">Home Page</a></div>
+                <div><a class="indexes" href="Academics.html">Academics</a></div>
+                <div><a class="indexes" href="Placements.html">Placement</a></div>
+                <div><a class="indexes" href="gallery.html">Gallery</a></div>
+                <div><a class="indexes" href="aboutus.html">About Us</a></div>
+                <div><a class="indexes" href="Contact Us.html">Contact Us</a></div>
+                <!-- <input class="Search" type="text" name="Seach the Website" id="Search" placeholder="Search The Website">-->
+                <a href="https://iiitlucknow.netlify.app/" class="bton">Log In</a>
+            </div>
+        </nav>
+    </header>
+    <div class="bg" style="border: 2px solid white;"></div>
+    <section class="contact">
+        <div class="content">
+            <h1>Contact Us</h1>
+            <p>For any further queries, please feel free to contact us using: </p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+
+                    <div class="text">
+                        <h3>Address:</h3>
+                        <p>IIIT Lucknow, <br>Chak Ganjaria, C. G. City <br>Lucknow-226002 </p>
+                    </div>
+                </div>
+                <div class="box">
+
+                    <div class="text">
+                        <h3>Email: </h3>
+                        <p>contact@iiitl.ac.in</p>
+                    </div>
+                </div>
+                <div class="box">
+
+                    <div class="text">
+                        <h3> Phone: </h3>
+                        <p>+91 012-345-6789</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h1>Send Message:</h1>
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span>Email Address</span>
+                    </div>
+                    <div class="inputbox">
+                        <textarea required="required"></textarea>
+                        <span>Type Your Message....</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="submit" name="" value="send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" style="display:block;">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h2>External Links</h2>
+                    <ul>
+                        <li>
+                            <a href="https://www.iiita.ac.in/">IIIT Allahabad </a>
+                        </li>
+                        <li>
+                            <a href="https://www.iiits.ac.in/secretariat-of-iiit-ppp-coordination-forum/">IIIT
+                                Coordination Forum </a>
+                        </li>
+                        <li>
+                            <a href="http://www.uplc.in/">UPLC</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Useful Links</h2>
+                    <ul>
+                        <li>
+                            <a href="https://iiitl.ac.in/index.php/academic-calendar/">Academic Calender</a>
+                        </li>
+                        <li>
+                            <a href="https://iiitl.ac.in/index.php/course-structure/">Course Structure</a>
+                        </li>
+                        <li>
+                            <a href="https://iiitl.ac.in/index.php/list-of-holidays-2/">List of Holidays</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li>
+                            <a href="https://iiitl.ac.in/index.php/tenders/">Tender </a>
+                        </li>
+                        <li>
+                            <a href="https://iiitl.ac.in/index.php/fee-structure/">Fee Structure </a>
+                        </li>
+                        <li>
+                            <a href="https://iiitl.ac.in/index.php/seat-matrix/">Seat Matrix </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="social-links">
+            <a href="#"> <i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
